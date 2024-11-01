@@ -27,14 +27,50 @@ public class downloadForm extends Base {
     }
 
     @Test(dependsOnMethods = "clickWhitePaperLink_Test")
-    public void enterFirstName_Test() throws InterruptedException {
+    public void verifyPageTitle() {
         euRuleChangePage.verifyMainHeader();
+    }
+
+    @Test(dependsOnMethods = "verifyPageTitle")
+    public void switchToiFrame() {
+        euRuleChangePage.switchToFrame();
+    }
+
+    @Test(dependsOnMethods = "switchToiFrame")
+    public void enterFirstName_Test() {
         euRuleChangePage.enterFirstName();
     }
 
-    //@Test(dependsOnMethods = "clickWhitePaperLink_Test")
-    // public void enterLastName_Test() throws InterruptedException {
-    //     Thread.sleep(10);
-    //     euRuleChangePage.enterLastName();
-    //  }
+    @Test(dependsOnMethods = "enterFirstName_Test")
+    public void enterLastName_Test() {
+        euRuleChangePage.enterLastName();
+    }
+
+    @Test(dependsOnMethods = "enterLastName_Test")
+    public void enterCompany_Test(){
+        euRuleChangePage.enterCompany();
+    }
+
+    @Test(dependsOnMethods = "enterCompany_Test")
+    public  void enterIndustry_Test(){
+        euRuleChangePage.enterIndustry();
+    }
+
+    @Test(dependsOnMethods = "enterIndustry_Test")
+    public void selectNewsletter_Test(){
+        euRuleChangePage.selectNewsletter();
+    }
+
+    @Test(dependsOnMethods = "selectNewsletter_Test")
+    public void clickSendMeACopy(){
+        euRuleChangePage.clickSendMeACopy();
+    }
+
+    @Test(dependsOnMethods = "clickSendMeACopy")
+    public  void verifyEmailErrorText(){
+        euRuleChangePage.verifyEmailErrorText();
+    }
+
+
+
 }
