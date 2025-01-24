@@ -36,7 +36,7 @@ jobs:
 
       # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
       - name: Update dependency graph
-        uses: advanced-security/maven-dependency-submission-action@
+        uses: advanced-security/maven-dependency-submission-action@v1
 
       # Step 3: Cache Maven dependencies (optional, but speeds up builds)
       - name: Cache Maven dependencies
