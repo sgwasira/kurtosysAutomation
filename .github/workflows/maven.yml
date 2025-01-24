@@ -6,7 +6,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Project Ci/CD
+name: Project CICD
 
 on:
   push:
