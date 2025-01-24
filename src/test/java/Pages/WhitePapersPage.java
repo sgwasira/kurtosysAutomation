@@ -35,7 +35,7 @@ public class WhitePapersPage {
     }
 
     public void verifyWhitePaperText(){
-        Assert.assertEquals(whitePaperHeader_element_xpath.getText(), "White Papers");
+        Assert.assertEquals(whitePaperHeader_element_xpath.getText(), "White Papers12");
     }
 
 
